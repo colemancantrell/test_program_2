@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workplace Program</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Include html2canvas from a CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>AIG Atlanta 2002 Perimeter Summit | Target Program</h1>
+    <p class="last-updated">Last Updated 11/17/2024</p>
+    
+    <!-- Example "TARGET" summary section -->
+    <section class="target-summary">
+      <table>
+        <thead>
+          <tr>
+            <th>Metrics</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Workplace Area</td>
+            <td>180,624 SF (Typical floor plate ~25,632 RSF + 1,200 SF reception)</td>
+          </tr>
+          <tr>
+            <td>Target Seats</td>
+            <td>1,200 (2029 growth projection)</td>
+          </tr>
+          <tr>
+            <td>Percent Enclosed Office</td>
+            <td>4% (Based on office-eligible count GR25+)</td>
+          </tr>
+          <tr>
+            <td>Workstations (Seats)</td>
+            <td>1,152 (Includes 150 touchdown workstation)</td>
+          </tr>
+          <tr>
+            <td>Offices (Seats)</td>
+            <td>48 (May need fewer if office eligibility doesn’t grow as fast as workstations)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Primary Work Spaces -->
+    <section class="space-table" id="captureArea">
+      <h2>Primary Work Spaces</h2>
+      <table id="primaryWorkSpaces">
+        <thead>
+          <tr>
+            <th>Space Type</th>
+            <th>Ratio</th>
+            <th>Baseline Area (PSF)</th>
+            <th>Space Qty</th>
+            <th>Subtotal (PSF)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Workstations</td>
+            <td>96%</td>
+            <td>30 PSF</td>
+            <!-- Editable cell for "Space Qty" -->
+            <td contenteditable="true">1,152</td>
+            <td>34,560 PSF</td>
+            <td>Assumes a 6' x 6' typical workstation size</td>
+          </tr>
+          <tr>
+            <td>Private Offices</td>
+            <td>4%</td>
+            <td>120 PSF</td>
+            <!-- Editable cell for "Space Qty" -->
+            <td contenteditable="true">48</td>
+            <td>5,760 PSF</td>
+            <td>Assumes a 10' x 12' typical office size</td>
+          </tr>
+          <tr>
+            <td>Subtotal</td>
+            <td>-</td>
+            <td>-</td>
+            <td>1,200</td>
+            <td>40,320 PSF</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Circulation</td>
+            <td>33%</td>
+            <td>-</td>
+            <td>-</td>
+            <td>25,778 PSF</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><strong>Individual Workspace Total Plannable Area</strong></td>
+            <td colspan="3">&nbsp;</td>
+            <td><strong>66,098 PSF</strong></td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Collaborative and Alternative Work Spaces -->
+    <section class="space-table">
+      <h2>Collaborative and Alternative Work Spaces</h2>
+      <table id="collabWorkSpaces">
+        <thead>
+          <tr>
+            <th>Space Type</th>
+            <th>Per Floor (PSF)</th>
+            <th>Baseline Area (PSF)</th>
+            <th>Space Qty</th>
+            <th>Subtotal</th>
+            <th>Total Seats</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Phone Room (1-2 pp)</td>
+            <td>1.15 wkst count</td>
+            <td>60 PSF</td>
+            <!-- Editable cell -->
+            <td contenteditable="true">13</td>
+            <td>4,800 PSF</td>
+            <td>30</td>
+            <td>Assumes 1.15 ratio &amp; 60 PSF each</td>
+          </tr>
+          <tr>
+            <td>Huddle Room (3-4 pp)</td>
+            <td>1.25 wkst count</td>
+            <td>120 PSF</td>
+            <!-- Editable cell -->
+            <td contenteditable="true">48</td>
+            <td>5,760 PSF</td>
+            <td>4</td>
+            <td>&nbsp;</td>
+          </tr>
+          <!-- More rows here... -->
+          <tr>
+            <td><strong>Collaborative Spaces Total Plannable Area</strong></td>
+            <td colspan="3">&nbsp;</td>
+            <td><strong>47,013 PSF</strong></td>
+            <td colspan="2">&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Amenities / Support -->
+    <section class="space-table">
+      <h2>Amenities / Support</h2>
+      <table id="amenitiesTable">
+        <thead>
+          <tr>
+            <th>Space Type</th>
+            <th>Ratio</th>
+            <th>Area (PSF)</th>
+            <th>Space Qty</th>
+            <th>Subtotal (PSF)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arrival</td>
+            <td>1 per location</td>
+            <td>1,200 PSF</td>
+            <!-- Editable cell -->
+            <td contenteditable="true">1</td>
+            <td>1,200 PSF</td>
+            <td>Pro Reception desk, waiting area</td>
+          </tr>
+          <tr>
+            <td>IT Storage &amp; Help Desk</td>
+            <td>1 per floor</td>
+            <td>500 PSF</td>
+            <!-- Editable cell -->
+            <td contenteditable="true">2</td>
+            <td>1,000 PSF</td>
+            <td>Confirm if other groups require separate space</td>
+          </tr>
+          <!-- More rows as needed... -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Button to Save as JPG -->
+    <button id="saveBtn">Save as JPG</button>
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>P
